@@ -1,0 +1,158 @@
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background: #03c04a;
+}
+
+p, #gMessage::placeholder {
+  font-size: 0.8rem;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
+  height: 100vh;
+  margin-inline: auto;
+}
+
+.main-generator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f5f5f5;
+
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-form label,
+.result-area legend {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.main-form #feedbackMessage {
+  margin-bottom: 1rem;
+}
+
+.main-form .form-input {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.main-form .form-input.erro-input{
+  border: 1px solid #c00303;
+}
+
+#feedbackMessage.erro-input{
+  color: #c00303;
+}
+
+.main-form #gNumber {
+  height: 30px;
+}
+
+.main-form #gMessage {
+  height: 90px;
+}
+
+.main-form textarea {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 90px;
+  max-height: 300px;
+}
+
+.main-form #button-gen {
+  background: white;
+  border: #03c04a solid 1px;
+  border-radius: 10px;
+
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin-top: 1rem;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.main-form #button-gen:hover {
+  color: white;
+  background: #03c04a;
+  transform: scale(1.1);
+}
+
+.result-container {
+  background: #f5f5f5;
+
+  display: none;
+  position: relative;
+
+  padding: 2rem;
+  width: 90%;
+  border-radius: 15px;
+}
+
+.result-container .copy-btn {
+  /* reset */
+  background: #03c04a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+
+  width: 60px;
+  height: 60px;
+
+  position: absolute;
+  right: 60px;
+  top: 60%;
+  transform: translateY(-60%);
+
+  font-size: 35px;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+
+.result-container .copy-btn:hover {
+  transform: translateY(-60%) scale(0.8);
+}
+
+.result-container .copy-btn .copied-icon {
+  display: none;
+}
+
+.result-container .result-area {
+  border: #03c04a solid 1px;
+  border-radius: 5px 10px 10px 5px;
+  width: 100%;
+}
+
+.result-container .result-area legend {
+  margin-left: -1px;
+  padding: 5px 10px;
+
+  background: #03c04a;
+  color: white;
+  border-radius: 5px 10px 10px 0;
+}
+
+.result-container .result-area #result-text {
+  padding: 1rem 100px 1rem 1rem;
+  text-decoration: underline;
+  word-break: break-all;
+}

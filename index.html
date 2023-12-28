@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- general configs -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de link - Whatsapp</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- scripts -->
+    <script src="./assets/scripts/main.js" defer></script>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <div class="main-generator">
+        <form class="main-form">
+          <label for="gNumber">Número de contato</label>
+          <input
+            class="form-input"
+            type="text"
+            id="gNumber"
+            name="gNumber"
+            placeholder="(01) 92345-6789"
+            maxlength="15"
+            onkeypress="mascara(this, telefone)"
+            required
+          />
+          <p id="feedbackMessage"></p>
+          <label for="gMessage">Mensagem</label>
+          <textarea
+            class="form-input"
+            name="gMessage"
+            placeholder="Sua mensagem aqui"
+            id="gMessage"
+            cols="30"
+            rows="5"
+          ></textarea>
+          <input type="button" id="button-gen" onclick="formValidation()" value="Gerar link" />
+        </form>
+      </div>
+      <div class="result-container" id="result-container">
+        <fieldset class="result-area">
+          <legend>Aqui está seu link:</legend>
+          <p id="result-text">1a</p>
+        </fieldset>
+        <button class="copy-btn" id="copy-button" onclick="copyLink()">
+          <i class="copy-icon fa-regular fa-copy"></i>
+          <i class="copied-icon fa-solid fa-copy"></i>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
